@@ -22,7 +22,7 @@ BUILDPACK_DIR="$(dirname $(dirname $0))"
 mkdir -p $BUILD_DIR/sysstat
 echo "-----> Fetching sysstat into slug"
 curl --progress-bar -o /tmp/sysstat.tgz $SYSSTAT_URL
-tar -xvf "$BUILD_DIR/sysstat" /tmp/sysstat.tgz
+tar -xvf /tmp/sysstat.tgz -C "$BUILD_DIR/sysstat"  
 
 #echo "-----> adding installer script into app/.profile.d"
 
