@@ -23,7 +23,8 @@ mkdir -p $BUILD_DIR/sysstat
 echo "-----> Fetching sysstat into slug"
 curl --progress-bar -o /tmp/sysstat.tgz $SYSSTAT_URL
 tar -xvf /tmp/sysstat.tgz -C "$BUILD_DIR/sysstat"  
-
+$BUILD_DIR/sysstat/etc/init.d/sysstat start 
+$BUILD_DIR/sysstat/etc/init.d/sysstat status 
 #echo "-----> adding installer script into app/.profile.d"
 
 #cleaning up...
